@@ -1,0 +1,30 @@
+# [TV_Channel]
+- id (text): Unique identifier for each TV channel
+- series_name (text): Name of the series broadcasted on the channel
+- Country (text): Country where the channel is based
+- Language (text): Primary language of the channel's broadcasts
+- Content (text): General content type broadcasted by the channel (e.g., music, news)
+- Pixel_aspect_ratio_PAR (text): Pixel aspect ratio used by the channel (e.g., 4:3, 16:9)
+- Hight_definition_TV (text): Indicates whether the channel broadcasts in high definition
+- Pay_per_view_PPV (text): Indicates whether the channel offers pay-per-view services
+- Package_Option (text): Package option under which the channel is available
+
+# [TV_series]
+- id (number): Unique identifier for each TV series episode
+- Episode (text): Title of the episode
+- Air_Date (text): Original air date of the episode
+- Rating (text): TV rating of the episode
+- Share (number): Market share percentage of the episode's viewership
+- 18_49_Rating_Share (text): Rating/share specifically for the demographic aged 18-49
+- Viewers_m (text): Number of millions of viewers who watched the episode
+- Weekly_Rank (number): Ranking of the episode compared to other TV shows in the same week
+- Channel (text): Identifier for the channel on which the episode was aired
+
+# [Cartoon]
+- id (number): Unique identifier for each cartoon episode
+- Title (text): Title of the cartoon episode
+- Directed_by (text): Name of the person who directed the episode
+- Written_by (text): Name of the person who wrote the episode
+- Original_air_date (text): Original air date of the cartoon episode
+- Production_code (number): Production code assigned to the episode
+- Channel (text): Identifier for the channel on which the cartoon was aired

@@ -1,0 +1,9 @@
+### Given a DB schema and a question, mask the table name, column name, and values in the question.
+
+<<<EXAMPLES>>>
+
+### SQLite SQL tables, with their properties:
+<<<DBSCHEMA>>>
+
+### Question: <<<QUESTION>>>
+### Masked Question:

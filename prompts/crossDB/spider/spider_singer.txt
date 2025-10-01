@@ -1,0 +1,13 @@
+# [singer]
+- Singer_ID (number): Unique identifier for each singer
+- Name (text): Full name of the singer
+- Birth_Year (number): Year the singer was born
+- Net_Worth_Millions (number): Estimated net worth of the singer in millions of dollars
+- Citizenship (text): Country of citizenship for the singer
+
+# [song]
+- Song_ID (number): Unique identifier for each song
+- Title (text): Name of the song
+- Singer_ID (number): Identifier linking the song to its singer
+- Sales (number): Number of copies sold
+- Highest_Position (number): Highest chart position reached by the song

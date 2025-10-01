@@ -1,0 +1,14 @@
+### Given a database schema, question, and knowledge evidence, extract a list of columns that should be referenced to convert the question into SQL.
+### SQLite SQL tables, with their properties:
+<<<DBSCHEMA>>>
+
+### Question: <<<QUESTION>>>
+
+You need to not only select the required columns, but also explain in detail why each column is needed.
+Your answer should strictly follow the following json format.
+{{
+    "reasoning": "", // The reason for choosing each column.
+    "columns": ["table_name_i.column_name_j", ...], // List of selected columns
+}}
+
+### Your Answer:

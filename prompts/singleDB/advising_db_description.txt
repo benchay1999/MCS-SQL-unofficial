@@ -1,0 +1,107 @@
+# [AREA]
+- COURSE_ID (number): the id of the course
+- AREA (text): the area of the course
+
+# [COURSE]
+- COURSE_ID (number): the id of the course
+- NAME (text): the name of the course
+- DEPARTMENT (text): the name of the department of a course
+- NUMBER (text): the course number of a course
+- CREDITS (text): the amount of credits of a course
+- ADVISORY_REQUIREMENT (text): the advisory requirement of a course
+- ENFORCED_REQUIREMENT (text): the enforced requirement of a course
+- DESCRIPTION (text): the textual description of a course
+- NUM_SEMESTERS (number): the number of semesters
+- NUM_ENROLLED (number): the number of enrollments
+- HAS_DISCUSSION (text): whether the course has discussion session or not
+- HAS_LAB (text): whether the course has lab session or not.
+- HAS_PROJECTS (text): whether the course has projects or not(note: no values are present in this column)
+- HAS_EXAMS (text): whether the course has exams or not(note: no values are present in this column)
+- NUM_REVIEWS (number): the number of reviews of a course
+- CLARITY_SCORE (number): the clarity score of a course(note: no values are present in this column)
+- EASINESS_SCORE (number): the easiness score of a course(note: no values are present in this column)
+- HELPFULNESS_SCORE (number): the helpfulness score of a course(note: no values are present in this column)
+
+# [COURSE_OFFERING]
+- OFFERING_ID (number): the id of the course offering
+- COURSE_ID (number): the id of the course
+- SEMESTER (number): the id of the semester
+- SECTION_NUMBER (number): the section number of the course offering
+- START_TIME (text): the time when the offered course starts
+- END_TIME (text): the time when the offered course ends
+- MONDAY (text): whether the offered course is held on Mondays or not
+- TUESDAY (text): whether the offered course is held on Tuesdays or not
+- WEDNESDAY (text): whether the offered course is held on Wednesdays or not
+- THURSDAY (text): whether the offered course is held on Thursdays or not
+- FRIDAY (text): whether the offered course is held on Fridays or not
+- SATURDAY (text): whether the offered course is held on Saturdays or not
+- SUNDAY (text): whether the offered course is held on Sundays or not
+- HAS_FINAL_PROJECT (text): whether the offered course has a final project or not
+- HAS_FINAL_EXAM (text): whether the offered course has a final exam or not
+- TEXTBOOK (text): the textbook of the offered course(note: no values are present in this column)
+- CLASS_ADDRESS (text): the class address of the offered course(note: no values are present in this column)
+- ALLOW_AUDIT (text): whether the offered course allows auditing or not
+
+# [COURSE_PREREQUISITE]
+- PRE_COURSE_ID (number): the id of the prerequisite course
+- COURSE_ID (number): the id of the course
+
+# [INSTRUCTOR]
+- INSTRUCTOR_ID (number): the id of the instructor
+- NAME (text): the name of the instructor
+- UNIQNAME (text): the textual unique identifier of the instructor
+
+# [OFFERING_INSTRUCTOR]
+- OFFERING_INSTRUCTOR_ID (number): the id of the pair OFFERING_ID and INSTRUCTOR_ID
+- OFFERING_ID (number): the id of the course offering
+- INSTRUCTOR_ID (number): the id of the instructor
+
+# [PROGRAM]
+- PROGRAM_ID (number): the id of the program
+- NAME (text): the name of the program
+- COLLEGE (text): the affiliation of the program
+- INTRODUCTION (text): the introduction of the program
+
+# [PROGRAM_COURSE]
+- PROGRAM_ID (number): the id of the program of the course
+- COURSE_ID (number): the id of the course
+- WORKLOAD (number): the workload of the course
+- CATEGORY (text): the category of the course
+
+# [PROGRAM_REQUIREMENT]
+- PROGRAM_ID (number): the id of the program of the course
+- CATEGORY (text): the category of the course
+- MIN_CREDIT (number): the minimum amount of credits to complete the program
+- ADDITIONAL_REQ (text): the additional requirements to complete the program
+
+# [SEMESTER]
+- SEMESTER_ID (number): the id of the semester
+- SEMESTER (text): the name of the semester
+- YEAR (number): the year of the semester
+
+# [STUDENT]
+- STUDENT_ID (number): the id of the student
+- LASTNAME (text): the last name of the student
+- FIRSTNAME (text): the first name of the student
+- PROGRAM_ID (number): the id of the program the student is in
+- DECLARE_MAJOR (text): whether the student has declared a major or not
+- TOTAL_CREDIT (number): the total amount of credits the student took
+- TOTAL_GPA (number): the total GPA of the student
+- ENTERED_AS (text): on which status the student entered the university
+- ADMIT_TERM (number): the semester of the admission of the student
+- PREDICTED_GRADUATION_SEMESTER (number): the predicted semester of the graduation of the student
+- DEGREE (text): the degree the student is pursuing
+- MINOR (text): the minor of the student(note: no values are present in this column)
+- INTERNSHIP (text): the internship of the student(note: no values are present in this column)
+
+# [STUDENT_RECORD]
+- STUDENT_ID (number): the id of the student
+- COURSE_ID (number): the id of the course
+- SEMESTER (number): the id of the semester
+- GRADE (text): the grade the student got
+- HOW (text): in what way the student got the grade from
+- TRANSFER_SOURCE (text): the transfer source of the student record(note: no values are present in this column)
+- EARN_CREDIT (text): whether the student earned credits or not
+- REPEAT_TERM (number): the repeat term of the student record(note: no values are present in this column)
+- TEST_ID (number): the id of the test of the student record(note: no values are present in this column)
+- OFFERING_ID (number): the id of the course offering

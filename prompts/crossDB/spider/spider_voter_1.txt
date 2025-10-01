@@ -1,0 +1,14 @@
+# [AREA_CODE_STATE]
+- area_code (number): Unique numeric identifier for a telephone area code
+- state (text): State associated with the area code
+
+# [CONTESTANTS]
+- contestant_number (number): Unique identifier for each contestant
+- contestant_name (text): Name of the contestant
+
+# [VOTES]
+- vote_id (number): Unique identifier for each vote record
+- phone_number (number): Phone number from which the vote was cast
+- state (text): State from which the vote was cast, determined by the caller's area code
+- contestant_number (number): Identifier linking the vote to a specific contestant
+- created (time): Timestamp indicating when the vote was recorded

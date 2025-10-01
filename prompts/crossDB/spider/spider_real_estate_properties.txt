@@ -1,0 +1,46 @@
+# [Ref_Feature_Types]
+- feature_type_code (text): Code used to uniquely identify a type of feature
+- feature_type_name (text): Descriptive name of the feature type
+
+# [Ref_Property_Types]
+- property_type_code (text): Code used to uniquely identify a type of property
+- property_type_description (text): Description of the property type
+
+# [Other_Available_Features]
+- feature_id (number): Unique identifier for each feature
+- feature_type_code (text): Code linking the feature to its type
+- feature_name (text): Name of the feature
+- feature_description (text): Description of what the feature entails
+
+# [Properties]
+- property_id (number): Unique identifier for each property
+- property_type_code (text): Code linking the property to its type
+- date_on_market (time): Date when the property was first listed on the market
+- date_sold (time): Date when the property was sold
+- property_name (text): Name of the property
+- property_address (text): Address of the property
+- room_count (number): Number of rooms in the property
+- vendor_requested_price (number): Price asked by the seller
+- buyer_offered_price (number): Price offered by the buyer
+- agreed_selling_price (number): Final agreed upon selling price
+- apt_feature_1 (text): Main feature of the apartment
+- apt_feature_2 (text): Secondary feature of the apartment
+- apt_feature_3 (text): Tertiary feature of the apartment
+- fld_feature_1 (text): Main feature of the field
+- fld_feature_2 (text): Secondary feature of the field
+- fld_feature_3 (text): Tertiary feature of the field
+- hse_feature_1 (text): Main feature of the house
+- hse_feature_2 (text): Secondary feature of the house
+- hse_feature_3 (text): Tertiary feature of the house
+- oth_feature_1 (text): Main feature of other types of property
+- oth_feature_2 (text): Secondary feature of other types of property
+- oth_feature_3 (text): Tertiary feature of other types of property
+- shp_feature_1 (text): Main feature of the shop
+- shp_feature_2 (text): Secondary feature of the shop
+- shp_feature_3 (text): Tertiary feature of the shop
+- other_property_details (text): Additional details about the property
+
+# [Other_Property_Features]
+- property_id (number): Identifier linking the feature to a specific property
+- feature_id (number): Identifier linking the feature to its detailed description in Other Available Features
+- property_feature_description (text): Description of how the feature applies to the property

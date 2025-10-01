@@ -1,0 +1,14 @@
+### Given a database schema, question, and knowledge evidence, extract a list of tables that should be referenced to convert the question into SQL.
+
+### SQLite SQL tables, with their properties:
+<<<DBSCHEMA>>>
+### Question: <<<QUESTION>>>
+
+You need to not only select the required tables, but also explain in detail why each table is needed.
+Your answer should strictly follow the following json format.
+{
+    "reasoning": "", // The reason for choosing each table.
+    "tables": [], // List of selected tables.
+}
+
+### Your Answer:

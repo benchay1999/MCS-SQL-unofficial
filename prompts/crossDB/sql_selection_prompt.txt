@@ -1,0 +1,36 @@
+### When a DB schema, a question, and a knowledge evidence are given, and up to three SQLite queries expressing the question are given, please choose the most accurate SQL based on the Checklist.
+
+<<<EXAMPLES>>>
+
+### SQLite SQL tables, with their properties:
+<<<DBSCHEMA>>>
+
+### The type and description of each column:
+<<<DBDESCRIPTION>>>
+
+### Sample rows of each table in csv format:
+<<<DBSAMPLES>>>
+
+### Question: <<<QUESTION>>>
+
+### Candidate SQLs:
+<<<CANDIDATES>>>
+
+### Checklist:
+1. The SQL should accurately represent the question.
+2. The SQL should accurately use the given knowledge evidence.
+3. The SELECT clause should not include any additional columns that are not included in the question.
+4. The order of columns in the SELECT clause must be the same as the order in the question.
+5. Check if the operations are being performed correctly according to the column type.
+
+### Instruction:
+- If the first SQL satisfies all the conditions of the checklist, please choose the first SQL. If not, move on to the next SQL.
+- If there’s no SQL that satisfies all the requirements on the checklist, just choose the first SQL.
+- Provide a detailed step-by-step explanation following the order of the checklist when checking whether each SQL satisfies the checklist.
+- Your answer should strictly follow the following json format.
+{{
+    "reasoning": "", // The reasoning steps for choosing the best SQL.
+    "sql": "", // The final chosen SQL.
+}}
+
+### Your Answer:

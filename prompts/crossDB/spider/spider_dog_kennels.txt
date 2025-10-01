@@ -1,0 +1,64 @@
+# [Breeds]
+- breed_code (text): Code used to uniquely identify each breed of dog
+- breed_name (text): Name of the breed
+
+# [Charges]
+- charge_id (number): Unique identifier for each type of charge
+- charge_type (text): Type of charge (e.g., Daily Accommodation, Drugs, Health Check)
+- charge_amount (number): Amount charged for the service or product
+
+# [Sizes]
+- size_code (text): Code used to categorize the size of the dog (e.g., Large, Medium, Small)
+- size_description (text): Description of the size category
+
+# [Treatment_Types]
+- treatment_type_code (text): Code used to uniquely identify a type of medical or care treatment
+- treatment_type_description (text): Description of the treatment type
+
+# [Owners]
+- owner_id (number): Unique identifier for each owner of a dog
+- first_name (text): Owner's first name
+- last_name (text): Owner's last name
+- street (text): Owner's street address
+- city (text): City where the owner lives
+- state (text): State where the owner resides
+- zip_code (text): Postal code for the owner's address
+- email_address (text): Owner's email address
+- home_phone (text): Owner's home telephone number
+- cell_number (text): Owner's cell phone number
+
+# [Dogs]
+- dog_id (number): Unique identifier for each dog
+- owner_id (number): Identifier linking the dog to its owner
+- abandoned_yn (text): Indicator if the dog was abandoned (1 for yes, 0 for no)
+- breed_code (text): Code linking the dog to its breed
+- size_code (text): Code linking the dog to its size category
+- name (text): Name of the dog
+- age (text): Age of the dog
+- date_of_birth (time): Date of birth of the dog
+- gender (text): Gender of the dog (1 for male, 0 for female)
+- weight (text): Weight of the dog
+- date_arrived (time): Date the dog arrived at the shelter
+- date_adopted (time): Date the dog was adopted
+- date_departed (time): Date the dog departed from the shelter
+
+# [Professionals]
+- professional_id (number): Unique identifier for each professional (e.g., veterinarian, staff)
+- role_code (text): Code indicating the professional's role
+- first_name (text): Professional's first name
+- street (text): Professional's street address
+- city (text): City where the professional lives
+- state (text): State where the professional resides
+- zip_code (text): Postal code for the professional's address
+- last_name (text): Professional's last name
+- email_address (text): Professional's email address
+- home_phone (text): Professional's home telephone number
+- cell_number (text): Professional's cell phone number
+
+# [Treatments]
+- treatment_id (number): Unique identifier for each treatment administered to a dog
+- dog_id (number): Identifier linking the treatment to a specific dog
+- professional_id (number): Identifier linking the treatment to the professional who administered it
+- treatment_type_code (text): Code linking the treatment to its type
+- date_of_treatment (time): Date the treatment was administered
+- cost_of_treatment (number): Cost of the treatment

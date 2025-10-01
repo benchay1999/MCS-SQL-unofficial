@@ -1,0 +1,77 @@
+# [Addresses]
+- address_id (number): Unique identifier for each address entry
+- line_1 (text): Primary address line
+- line_2 (text): Secondary address line (optional)
+- line_3 (text): Tertiary address line (optional)
+- city (text): City component of the address
+- zip_postcode (text): Postal or ZIP code for the address
+- state_province_county (text): State, province, or county of the address
+- country (text): Country of the address
+- other_address_details (text): Additional details related to the address
+
+# [Courses]
+- course_id (number): Unique identifier for each course
+- course_name (text): Name of the course
+- course_description (text): Brief description of the course
+- other_details (text): Any additional details about the course
+
+# [Departments]
+- department_id (number): Unique identifier for each department
+- department_name (text): Name of the department
+- department_description (text): Description of the department's focus or specialty
+- other_details (text): Additional information about the department
+
+# [Degree_Programs]
+- degree_program_id (number): Unique identifier for each degree program
+- department_id (number): Identifier linking the degree program to its respective department
+- degree_summary_name (text): Brief name or summary of the degree program
+- degree_summary_description (text): Detailed description of the degree program
+- other_details (text): Additional details about the degree program
+
+# [Sections]
+- section_id (number): Unique identifier for each course section
+- course_id (number): Identifier linking the section to its course
+- section_name (text): Name of the section
+- section_description (text): Description of what the section covers
+- other_details (text): Additional details about the section
+
+# [Semesters]
+- semester_id (number): Unique identifier for each academic semester
+- semester_name (text): Name of the semester
+- semester_description (text): Description of the semester's timing and main events
+- other_details (text): Additional details about the semester
+
+# [Students]
+- student_id (number): Unique identifier for each student
+- current_address_id (number): Identifier linking to the student's current address
+- permanent_address_id (number): Identifier linking to the student's permanent address
+- first_name (text): First name of the student
+- middle_name (text): Middle name of the student
+- last_name (text): Last name of the student
+- cell_mobile_number (text): Mobile phone number of the student
+- email_address (text): Email address of the student
+- ssn (text): Social Security Number or equivalent identifier
+- date_first_registered (time): Date the student first registered
+- date_left (time): Date the student left or graduated
+- other_student_details (text): Additional details or notes about the student
+
+# [Student_Enrolment]
+- student_enrolment_id (number): Unique identifier for each student enrolment record
+- degree_program_id (number): Identifier linking the enrolment to a specific degree program
+- semester_id (number): Identifier for the semester in which the enrolment is valid
+- student_id (number): Identifier linking the enrolment to a specific student
+- other_details (text): Additional details about the enrolment
+
+# [Student_Enrolment_Courses]
+- student_course_id (number): Unique identifier for each course enrolment by a student
+- course_id (number): Identifier linking the enrolment to a specific course
+- student_enrolment_id (number): Identifier linking the course enrolment to a student's overall enrolment record
+
+# [Transcripts]
+- transcript_id (number): Unique identifier for each transcript
+- transcript_date (time): Date the transcript was issued
+- other_details (text): Additional details about the transcript
+
+# [Transcript_Contents]
+- student_course_id (number): Identifier linking the transcript entry to a specific course taken by the student
+- transcript_id (number): Identifier linking the transcript entry to a specific transcript

@@ -1,0 +1,30 @@
+# [conductor]
+- Conductor_ID (number): Unique identifier for each conductor
+- Name (text): Full name of the conductor
+- Age (number): Age of the conductor
+- Nationality (text): Nationality of the conductor
+- Year_of_Work (number): Years of professional work experience
+
+# [orchestra]
+- Orchestra_ID (number): Unique identifier for each orchestra
+- Orchestra (text): Name of the orchestra
+- Conductor_ID (number): Identifier linking the orchestra to its conductor
+- Record_Company (text): Name of the record company associated with the orchestra
+- Year_of_Founded (number): Year the orchestra was founded
+- Major_Record_Format (text): Main format of records produced by the orchestra (CD, LP, DVD)
+
+# [performance]
+- Performance_ID (number): Unique identifier for each performance
+- Orchestra_ID (number): Identifier linking the performance to its orchestra
+- Type (text): Type or category of the performance (e.g., Audition, Concert)
+- Date (text): Date of the performance
+- Official_ratings_(millions) (number): Official ratings received for the performance in millions
+- Weekly_rank (text): Weekly rank of the performance
+- Share (text): Share of audience viewership during the performance
+
+# [show]
+- Show_ID (number): Unique identifier for each show
+- Performance_ID (number): Identifier linking the show to a specific performance
+- If_first_show (others): Indicates whether it is the first show of its type or location
+- Result (text): Outcome or result of the show (T for success, F for failure)
+- Attendance (number): Number of attendees at the show

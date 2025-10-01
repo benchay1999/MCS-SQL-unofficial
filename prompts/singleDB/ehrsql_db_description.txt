@@ -1,0 +1,142 @@
+# [admissions]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- admittime (text): provides the date and time the patient was admitted to the hospital
+- dischtime (text): provides the date and time the patient was discharged from the hospital
+- admission_type (text): the urgency of the admission
+- admission_location (text): provides information about the location of the patient prior to arriving at the hospital
+- discharge_location (text): the disposition of the patient after they are discharged from the hospital
+- insurance (text): provides information about the patient's insurance during hospitalization
+- language (text): information about the patient's language
+- marital_status (text): information about the patient's marital status during hospitalization
+- age (number): information about the patient's age during hospitalization
+
+# [chartevents]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- stay_id (number): unique to a patient ward stay
+- charttime (text): records the time at which an observation was made
+- itemid (number): identifier for a single measurement type in the database
+- valuenum (number): the value of the itemid, NULL if non-numeric
+- valueuom (text): the unit of measurement for the value
+
+# [cost]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- event_type (text): refers to the table in the database to which the event belongs
+- event_id (number): the row_id of the event in the table
+- chargetime (text): the charttime of the event that is charged
+- cost (number): the cost of the event
+
+# [d_icd_diagnoses]
+- row_id (number): unique identifier for each row of the table
+- icd_code (text): international Coding Definitions (ICD) code with versions distinguishable by the prefix
+- long_title (text): the description or meaning of the ICD code
+
+# [d_icd_procedures]
+- row_id (number): unique identifier for each row of the table
+- icd_code (text): international Coding Definitions (ICD) code with two versions differentiated by the prefix
+- long_title (text): brief definition of the procedure code
+
+# [d_items]
+- row_id (number): unique identifier for each row of the table
+- itemid (number): unique identifier for each row
+- label (text): describes the concept represented by the itemid
+- abbreviation (text): common abbreviation for the label
+- linksto (text): the table name to which the data links
+
+# [d_labitems]
+- row_id (number): unique identifier for each row of the table
+- itemid (number): unique identifier for a laboratory concept
+- label (text): describes the laboratory concept represented by the itemid
+
+# [diagnoses_icd]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- icd_code (text): international Coding Definitions (ICD) code
+- charttime (text): time at which the icd_code was charted
+
+# [icustays]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- stay_id (number): unique to a patient ward stay
+- first_careunit (text): the first ICU type in which the patient was cared for
+- last_careunit (text): the last ICU type in which the patient was cared for
+- intime (text): date and time the patient was transferred into the ICU
+- outtime (text): date and time the patient was transferred out of the ICU
+
+# [inputevents]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- starttime (text): start time of an input/output event
+- endtime (text): end time of an input/output event
+- itemid (number): identifier for a measurement type in the database
+- amount (number): amount of a drug or substance administered
+
+# [labevents]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- itemid (number): uniquely denotes laboratory concepts
+- charttime (text): time at which the lab measurement was charted
+- valuenum (number): result of the lab measurement
+- valueuom (text): unit of measurement for the lab concept
+
+# [microbiologyevents]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- charttime (text): records the time at which an observation was made
+- spec_type_desc (text): the specimen tested for bacterial growth
+- test_name (text): the test performed on the given specimen
+- org_name (text): the organism, if any, that grew during the test
+
+# [outputevents]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- stay_id (number): unique to a patient ward stay
+- charttime (text): time of an output event
+- itemid (number): identifier for a measurement type
+- value (number): amount of a substance at the charttime
+
+# [patients]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- gender (text): genotypical sex of the patient
+- dob (text): date of birth of the patient
+- dod (text): date of death of the patient
+
+# [prescriptions]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- starttime (text): prescribed start time for the medication
+- stoptime (text): prescribed stop time for the medication
+- drug (text): description of the medication administered
+- dose_val_rx (number): prescribed dose for the patient
+- dose_unit_rx (text): unit of measurement for the dose
+- route (text): route of administration for the medication
+
+# [procedures_icd]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- icd_code (text): international Coding Definitions (ICD) code
+- charttime (text): time of the procedure
+
+# [transfers]
+- row_id (number): unique identifier for each row of the table
+- subject_id (number): unique identifier for an individual patient
+- hadm_id (number): unique identifier for an individual hospital stay of an individual patient
+- transfer_id (number): unique identifier for a patient's physical location
+- eventtype (text): describes the transfer event
+- careunit (text): type of unit or ward where the patient is located
+- intime (text): date and time the patient was transferred into the care unit
+- outtime (text): date and time the patient was transferred out of the location

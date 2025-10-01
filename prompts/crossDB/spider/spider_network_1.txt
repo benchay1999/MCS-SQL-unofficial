@@ -1,0 +1,12 @@
+# [Highschooler]
+- ID (number): Unique identifier for each high school student
+- name (text): The student's full name
+- grade (number): The grade level of the student
+
+# [Friend]
+- student_id (number): Identifier for the student who is friends with another student
+- friend_id (number): Identifier for the student who is the friend of the first student
+
+# [Likes]
+- student_id (number): Identifier of the student who likes another student
+- liked_id (number): Identifier of the student who is liked by the first student

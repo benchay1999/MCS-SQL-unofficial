@@ -1,0 +1,179 @@
+# [AIRCRAFT]
+- AIRCRAFT_CODE (text): a unique identifier for each aircraft
+- AIRCRAFT_DESCRIPTION (text): a textual description of each aircraft model, including the make and series
+- MANUFACTURER (text): the name of the company that manufactured the aircraft
+- BASIC_TYPE (text): the basic type of the aircraft
+- ENGINES (number): the number of engines on the aircraft
+- PROPULSION (text): the type of propulsion system used by the aircraft
+- WIDE_BODY (text): whether the aircraft has a wide-body fuselage
+- WING_SPAN (number): the wingspan of the aircraft
+- LENGTH (number): the length of the aircraft
+- WEIGHT (number): the weight of the aircraft
+- CAPACITY (number): the total number of paasengers the aircraft can carry
+- PAY_LOAD (number): the maximum payload the aircraft can carry
+- CRUISING_SPEED (number): the cruising speed of the aircraft
+- RANGE_MILES (number): the maximum range of the aircraft in miles
+- PRESSURIZED (text): whether the aircraft cabin is pressurized
+
+# [AIRLINE]
+- AIRLINE_CODE (text): a unique identifier for each airline
+- AIRLINE_NAME (text): the name of the airline
+- NOTE (text): additional notes on the airline
+
+# [AIRPORT]
+- AIRPORT_CODE (text): a unique identifier for each airport
+- AIRPORT_NAME (text): the name of the airport
+- STATE_CODE (text): the code of the state the airport is situated in
+- COUNTRY_NAME (text): the name of the country the airport is in
+- TIME_ZONE_CODE (text): the time zone the airport is in
+- MINIMUM_CONNECT_TIME (number): the minimum connect time of the airport
+
+# [AIRPORT_SERVICE]
+- CITY_CODE (text): the code of the city the airport is situated in
+- AIRPORT_CODE (text): the code of the airport
+- MILES_DISTANT (number): how many miles it is distant
+- DIRECTION (text): the compass direction of the airport relative to the city center
+- MINUTES_DISTANT (number): the typical drive time from the city center to the airport
+
+# [CITY]
+- CITY_CODE (text): a unique identifier for each city
+- CITY_NAME (text): the name of the city
+- STATE_CODE (text): the code of the state the city belongs to
+- COUNTRY_NAME (text): the name of the country the city belongs to
+- TIME_ZONE_CODE (text): the time zone of the city
+
+# [CLASS_OF_SERVICE]
+- BOOKING_CLASS (text): a unique identifier for each service
+- RANK (number): the rank of the service
+- CLASS_DESCRIPTION (text): the textual description of the service
+
+# [CODE_DESCRIPTION]
+- CODE (text): a unique identifier for each code
+- DESCRIPTION (text): the textual description of the code
+
+# [COMPARTMENT_CLASS]
+- COMPARTMENT (text): the name of the compartment
+- CLASS_TYPE (text): the class type of the compartment
+
+# [DATE_DAY]
+- MONTH_NUMBER (number): the month in numerical form
+- DAY_NUMBER (number): the day
+- YEAR (number): the year
+- DAY_NAME (text): the name of the day
+
+# [DAYS]
+- DAYS_CODE (text): the code of the operating days of a flight
+- DAY_NAME (text): the name of the day
+
+# [DUAL_CARRIER]
+- MAIN_AIRLINE (text): the airline code of the primary carrier operating the flight
+- LOW_FLIGHT_NUMBER (number): the lowest flight number of the airline
+- HIGH_FLIGHT_NUMBER (number): the highest flight number of the airline
+- DUAL_AIRLINE (text): the airline code of the secondary carrier operating the flight
+- SERVICE_NAME (text): the service name of the flight operations
+
+# [EQUIPMENT_SEQUENCE]
+- AIRCRAFT_CODE_SEQUENCE (text): a sequence of aircraft codes
+- AIRCRAFT_CODE (text): a unique identifier for each aircraft
+
+# [FARE]
+- FARE_ID (number): a unique identifier for each fare
+- FROM_AIRPORT (text): the code of the airport the airport from which the flight departs
+- TO_AIRPORT (text): the code of the airport to which the flight arrives
+- FARE_BASIS_CODE (text): the basis code for the fare
+- FARE_AIRLINE (text): the airline code of the fare
+- RESTRICTION_CODE (text): the restriction code of the fare
+- ONE_DIRECTION_COST (number): the one direction cost of the fare
+- ROUND_TRIP_COST (number): the round trip cost of the fare
+- ROUND_TRIP_REQUIRED (text): whether the fare requires round trip or not
+
+# [FARE_BASIS]
+- FARE_BASIS_CODE (text): a unique identifier for each fare basis
+- BOOKING_CLASS (text): the booking class for the fare basis
+- CLASS_TYPE (text): the type of class for the fare basis
+- PREMIUM (text): whether the fare basis is a premium or not
+- ECONOMY (text): whether the fare basis is an economy or not
+- DISCOUNTED (text): whether the fare basis is discounted or not
+- NIGHT (text): whether the fare runs on night or not
+- SEASON (text): the seasonal applicability of the fare
+- BASIS_DAYS (text): the days of the week when the fare can be used
+
+# [FLIGHT]
+- FLIGHT_ID (number): a unique identifier for each flight
+- FLIGHT_DAYS (text): the days of the week on which the flight operates
+- FROM_AIRPORT (text): the code of the airport the airport from which the flight departs
+- TO_AIRPORT (text): the code of the airport to which the flight arrives
+- DEPARTURE_TIME (number): the departure time of the flight in a numeric form. For example, 05:40 would be 540 and 10:45 would be 1045
+- ARRIVAL_TIME (number): the arrival time of the flight in a numeric form. For example, 07:33 would be 733 and 12:43 would be 1243
+- AIRLINE_FLIGHT (text): a combination of the airline code and the flight number
+- AIRLINE_CODE (text): the code of the airline of the flight
+- FLIGHT_NUMBER (number): the flight number of the flight
+- AIRCRAFT_CODE_SEQUENCE (text): a code identifying the type of aircraft used for the flight
+- MEAL_CODE (text): the meal code of the flight
+- STOPS (number): the number of stops the flight makes before reaching the final destination
+- CONNECTIONS (number): the number of connections, or separate flights needed to reach the final destination from the origin
+- DUAL_CARRIER (text): whether the flight is operated by more than one airline
+- TIME_ELAPSED (number): the elapsed time of the flight
+
+# [FLIGHT_FARE]
+- FLIGHT_ID (number): a unique identifier for each flight
+- FARE_ID (number): a unique identifier for each fare
+
+# [FLIGHT_LEG]
+- FLIGHT_ID (number): a unique identifier for each flight
+- LEG_NUMBER (number): the sequence of the leg within the overall flight
+- LEG_FLIGHT (number): an identifier for each individual leg of a flight
+
+# [FLIGHT_STOP]
+- FLIGHT_ID (number): a unique identifier for each flight
+- STOP_NUMBER (number): the number of stops for the flight
+- STOP_DAYS (text): the days of the week on which the flight stops
+- STOP_AIRPORT (text): the airport code where the flight stops
+- ARRIVAL_TIME (number): the arrival time of the flight in a numeric form
+- ARRIVAL_AIRLINE (text): the airline code for the airline operating the arriving flight
+- ARRIVAL_FLIGHT_NUMBER (number): the flight number of the arriving flight
+- DEPARTURE_TIME (number): the departure time of the flight in a numeric form. For example, 07:33 would be 733 and 12:43 would be 1243
+- DEPARTURE_AIRLINE (text): the airline code for the airline operating the departing flight
+- DEPARTURE_FLIGHT_NUMBER (number): the flight number for the departing flight
+- STOP_TIME (number): the duration of the stop, given in minutes
+
+# [FOOD_SERVICE]
+- MEAL_CODE (text): the meal code of the flight
+- MEAL_NUMBER (number): the number the meal is being provided
+- COMPARTMENT (text): the name of the compartment
+- MEAL_DESCRIPTION (text): What type the meal is
+
+# [GROUND_SERVICE]
+- CITY_CODE (text): the code of the city
+- AIRPORT_CODE (text): the code of the airport
+- TRANSPORT_TYPE (text): the type of the transportation
+- GROUND_FARE (number): the fare for the ground service
+
+# [MONTH]
+- MONTH_NUMBER (number): the month in numerical form
+- MONTH_NAME (text): the name of the month
+
+# [RESTRICTION]
+- RESTRICTION_CODE (text): a unique identifier for each restriction
+- ADVANCE_PURCHASE (number): the number of days in advance that a ticket must be purchased
+- STOPOVERS (text): whether stopovers are allowed
+- SATURDAY_STAY_REQUIRED (text): whether staying over a Saturday night is required
+- MINIMUM_STAY (number): the minimum number of days a passenger can stay at the destination before returning
+- MAXIMUM_STAY (number): the maximum number of days a passenger can stay at the destination before returning
+- APPLICATION (text): the detailed description of the types of fares under the restriction
+- NO_DISCOUNTS (text): the category of the restriction that discounts are not available
+
+# [STATE]
+- STATE_CODE (text): a unique identifier for each state
+- STATE_NAME (text): the name of the state
+- COUNTRY_NAME (text): the name of the country the state belongs to
+
+# [TIME_INTERVAL]
+- PERIOD (text): the period of time in a day
+- BEGIN_TIME (number): the time when the period begins. It is in a numerical form. For example, 06:00 would be 600 and 00:00 would be 0
+- END_TIME (number): the time when the period ends. It is in a numerical form. For example, 06:00 would be 600 and 00:00 would be 0
+
+# [TIME_ZONE]
+- TIME_ZONE_CODE (text): a unique identifier for each time zone
+- TIME_ZONE_NAME (text): the name of the time zone
+- HOURS_FROM_GMT (number): the number of hours each time zone is offset from Greenwich Mean Time

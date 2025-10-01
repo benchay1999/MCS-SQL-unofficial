@@ -1,0 +1,14 @@
+# [poker_player]
+- Poker_Player_ID (number): Unique identifier for each poker player
+- People_ID (number): Identifier linking the poker player to their personal details
+- Final_Table_Made (number): Number of times the player has made it to the final table
+- Best_Finish (number): Highest position finished in a tournament
+- Money_Rank (number): Ranking of the player based on earnings
+- Earnings (number): Total career earnings of the player in USD
+
+# [people]
+- People_ID (number): Unique identifier for each person
+- Nationality (text): Nationality of the person
+- Name (text): Full name of the person
+- Birth_Date (text): Date of birth of the person
+- Height (number): Height of the person in centimeters

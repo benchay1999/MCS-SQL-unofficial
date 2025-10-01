@@ -1,0 +1,33 @@
+# [city]
+- ID (number): Unique identifier for each city
+- Name (text): Name of the city
+- CountryCode (text): Country code to which the city belongs
+- District (text): Administrative district or region where the city is located
+- Population (number): Total population of the city
+
+# [sqlite_sequence]
+- name (text): Name of the database table to which the sequence number applies
+- seq (text): Current maximum sequence number used in the table
+
+# [country]
+- Code (text): Unique identifier for each country
+- Name (text): Official name of the country
+- Continent (text): Continent on which the country is located
+- Region (text): Specific geographical or political region of the continent
+- SurfaceArea (number): Total land area of the country in square kilometers
+- IndepYear (number): Year the country gained independence
+- Population (number): Total population of the country
+- LifeExpectancy (number): Average life expectancy of the country's population
+- GNP (number): Gross National Product in US dollars
+- GNPOld (number): Gross National Product one year prior in US dollars
+- LocalName (text): Local name of the country
+- GovernmentForm (text): Form of government
+- HeadOfState (text): Current head of state
+- Capital (number): Identifier for the capital city of the country
+- Code2 (text): Two-letter country code
+
+# [countrylanguage]
+- CountryCode (text): Country code indicating the country where the language is spoken
+- Language (text): Name of the language
+- IsOfficial (text): Indicator of whether the language is an official language ('T' for true, 'F' for false)
+- Percentage (number): Percentage of the country's population that speaks the language
